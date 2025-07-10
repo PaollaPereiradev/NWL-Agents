@@ -20,7 +20,7 @@
   <h2>Assistente de Meta</h2>
 
   <p>Pergunte sobre estratégias, builds, e dicas para seus jogos</p>
-   <form>
+   <form id="form">
                     <input type="password" placeholder="Informe a API KEY do Gimini">
 
                     <select id="gameSelect">
@@ -30,8 +30,8 @@
                         <option value="cs">CS:GO</option>
                         <option value="Red dead">Red Dead Redemption 2</option>
                     </select>
-                    <input type="text" placeholder="EX: Melhor build para ADC...">
-                    <button>
+                    <input id="questionInput" type="text" placeholder="EX: Melhor build para ADC...">
+                    <button id="askButton">
                       Perguntar
                     </button>
                     </form>
@@ -43,6 +43,6 @@
   </div>
   </section>
 </main>
-  
+  <script src="./script.js"></script>
 </body>
 </html>
