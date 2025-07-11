@@ -93,7 +93,7 @@ button {
   border-radius: 0.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter: spacing 0.12rem;
+  letter-spacing:  0.12rem;
   transition: all 0.3s;
 }
 button:hover {
@@ -105,4 +105,11 @@ button:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+button:disabled{
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  opacity: initial;
+  cursor: not-allowed;
 }
