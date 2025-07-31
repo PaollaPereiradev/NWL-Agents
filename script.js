@@ -5,6 +5,9 @@ const askButton = document.getElementById('askButton')
 const aiResponse = document.getElementById('aiResponse')
 const form = document.getElementById('form') 
 
+const perguntarIa  = async() => {
+  
+}
 const enviarformulario = (event) => {
   // CORREÇÃO: É preciso receber o objeto 'event' e chamar o método a partir dele.
   event.preventDefault()
@@ -19,6 +22,18 @@ const enviarformulario = (event) => {
 
   askButton.disabled = true
   askButton.textContent = 'Perguntando...'
+  askButton.classList.add('loading')
+
+  try{
+    // pergunta para a IA
+  } catch (error) {
+console.log("Erro: ",error)
+
+  } finally{
+      askButton.disabled = false
+      askButton.textContent = "Perguntar"
+      askButton.classList.remove("loading")
+  }
 }
 
 form.addEventListener('submit', enviarformulario)
